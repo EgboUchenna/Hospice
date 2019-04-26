@@ -26,9 +26,22 @@ function Staff(name, email, password) {
 }
 
 // Add all methods that can be carried out by any Staff to its prototype.
-Staff.prototype.readSingleStaff = function(id) {
-    return db.Staff[id.toString()];
-}
 
+// ****** Read A Single Staff By His ID  ******
+Staff.prototype.readSingleStaff = function(id) {
+  return db.Staff[id.toString()];
+};
+
+// ****** Update a Staff Details  ******
+Staff.prototype.updateStaffDetails = function(id, name, email, password) {
+  if (!id || !name || !email || !password) return "All fields are required";
+
+  if (id.toString() !== this.id) return "Cannot update another Staff Details";
+
+  db.Staff[id.toString()].name = name;
+  db.Staff[id.toString()].email = email;
+  db.Staff[id.toString()].password = password;
+  return "Staff updated successfully";
+};
 
 module.exports = Staff;
