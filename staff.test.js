@@ -2,34 +2,46 @@ const Staff = require("./staff");
 const db = require("./database");
 
 // Create a new staff from the Staff constructor.
-var Staff1 = new Staff(
-  "Egbo Uchenna",
-  "egbouchenna001@gmail.com",
-  "phoneix120"
-);
+var Staff1 = new Staff("Egbo Uchenna", "egbouchenna@gmail.com", "phoneix120");
 
-var Staff2 = new Staff(
-    " Uchenna Egbo",
-    "uchenna001@gmail.com",
-    "phoneix140"
-  );
+var Staff2 = new Staff(" Uchenna Egbo", "uchenna001@gmail.com", "phoneix140");
+
+var Staff3 = new Staff("Steph", "Steph@gmail.com", "stephan$11");
+
 console.log(db.Staff);
 
 //  Check if a staff object  was created successfully
-test('New Staff to be successfully created', function(){
-    expect(Staff1).toEqual(db.Staff['1']);
+test("A New Staff to be successfully created", function() {
+  expect(Staff1).toEqual(db.Staff["1"]);
 });
 
 // Read a single staff by his ID and output the details.
-test("Read a single Staff by ID to and return his object", function() {
-    expect(Staff2.readSingleStaff(1)).toEqual(db.Staff["1"]);
-  });
+test("Should Read a single Staff by ID to and return his object", function() {
+  expect(Staff2.readSingleStaff(1)).toEqual(db.Staff["1"]);
+});
 
-// test("Admin Doctor can create another staff", function() {
-//   var anotherStaff = Staff1.createNewStaff(
-//     "Matthew Egbo",
-//     'uchesco4jesus@gmail.com',
-//     "infinityXXX"
-//   );
-//   expect(anotherStaff.email).toBe("uchesco@gmail.com");
-// });
+//   Update staff with the same ID
+test("A Staff to update his own details", function() {
+  expect(
+    Staff3.updateStaffDetails(
+      3,
+      "Stephen",
+      "StephenMatt@gmail.com",
+      "stephanLove"
+    )
+  ).toBe("Staff updated successfully");
+});
+
+//   All fields to be updated must be filled.
+test("All fields of Staff details to be Required", function() {
+  expect(Staff2.updateStaffDetails(2, "Steph@gmail.com", "stephan")).toBe(
+    "All fields are required"
+  );
+});
+
+//   A Staff cannot update another Staff details.
+test("A Staff cannot update another Staff details", function() {
+  expect(
+    Staff1.updateStaffDetails(3, "Steph", "Steph@gmail.com", "stephan")
+  ).toBe("Cannot update another Staff Details");
+});
