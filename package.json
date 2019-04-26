@@ -1,0 +1,35 @@
+{
+  "name": "hospice",
+  "version": "1.0.0",
+  "description": "A mini hospital management system app which models javascript prototype object programming to implement inheritance, encapsulation and over-riding. This is created to simply illustrate how prototyping works under the hood in javascript and understand how to use it in modelling real life objects or behaviour of things.",
+  "main": "staff.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EgboUchenna/Hospice.git"
+  },
+  "keywords": [
+    "javascript",
+    "ES5",
+    "Prototype",
+    "Oriented",
+    "Programming",
+    "testing",
+    "with",
+    "Jest",
+    "Object",
+    "Oriented",
+    "Programming."
+  ],
+  "author": "Egbo Uchenna M.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EgboUchenna/Hospice/issues"
+  },
+  "homepage": "https://github.com/EgboUchenna/Hospice#readme",
+  "dependencies": {
+    "jest": "^24.7.1"
+  }
+}
