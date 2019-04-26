@@ -26,7 +26,9 @@ function Staff(name, email, password) {
 }
 
 // Add all methods that can be carried out by any Staff to its prototype.
-
+Staff.prototype.readSingleStaff = function(id) {
+    return db.Staff[id.toString()];
+}
 
 
 module.exports = Staff;
