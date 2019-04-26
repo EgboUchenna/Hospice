@@ -52,7 +52,7 @@ $ npm test
 ## Features
 
 - Create a new Staff.
-- Read a single by his ID.
+- Read a single Staff by his ID.
 - Read all Staff (\*)
 - Update the details of a Staff.
 - Delete Staff(\*)
@@ -66,6 +66,23 @@ $ npm test
 - Delete all operations(\*)
 - A mock database to handle data storage.
 - All methods marked (\*) can be carried out by an DOCTOR staff alone.
+
+> Properties and methods of each object
+
+Staff Object contains the following properties:  
+
+- Name.
+- Email.
+- Password.
+- ID (Auto increment).
+***
+Operations Object contains the following properties:   
+- Staff ID.
+- Time of activity.
+-  Date of Activity.
+- ID (Auto increment).
+- Activities in the Opreations.
+***
 
 ## Inspiration
 
