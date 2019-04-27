@@ -17,6 +17,7 @@ Doctor.prototype.createNewStaff = function(name, email, password) {
     return new Staff(name, email, password);
   };
   
+// Read all Staff  from database.
 Doctor.prototype.readAllStaff = function() {
     return db.Staff;
 }
