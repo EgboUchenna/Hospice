@@ -37,4 +37,9 @@ Doctor.prototype.deleteAllStaff = function() {
 Doctor.prototype.readAllOperations = function() {
     return Operations.prototype.readAllOperations();
   };
+
+//   Read one operation by its ID
+  Doctor.prototype.readOneOperationById = function (operation_Id) {
+    return Operations.prototype.readOneOperationById(operation_Id);
+  };
 module.exports = Doctor;
