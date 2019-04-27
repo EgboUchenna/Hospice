@@ -1,4 +1,4 @@
-// const doctor = require("./doctor");
+const Operations = require("./operations");
 const db = require("./database");
 
 // Initialize Staff constructor
@@ -42,6 +42,11 @@ Staff.prototype.updateStaffDetails = function(id, name, email, password) {
   db.Staff[id.toString()].email = email;
   db.Staff[id.toString()].password = password;
   return "Staff updated successfully";
+};
+
+//  Create an activity
+Staff.prototype.createNewActivity = function(activity) {
+  return new Operations(this.id, activity);
 };
 
 module.exports = Staff;
