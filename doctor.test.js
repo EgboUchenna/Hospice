@@ -30,5 +30,9 @@ test("Doctor can create a new  Staff", function() {
   test("Doctor to read all Staff Operations", function() {
     expect(adminDoctor.readAllOperations()).toEqual(db.Operations);
   });
-  
+
+  //   Admin Doctor to read one Staff Operations by its ID.
+  test("Doctor to read one operation by ID", function() {
+    expect(adminDoctor.readOneOperationById(2)).toEqual(db.Operations["2"]);
+  });
   
