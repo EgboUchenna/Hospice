@@ -22,4 +22,8 @@ Doctor.prototype.readAllStaff = function() {
     return db.Staff;
 }
 
+Doctor.prototype.deleteStaff = function(staff_id) {
+    return delete db.Staff[staff_id.toString()];
+  };
+
 module.exports = Doctor;
