@@ -57,5 +57,12 @@ test("Admin Doctor to update his own details", function() {
       )
     ).toBe("Staff updated successfully");
   });
+
+//   Staff can perform a new Operation
+test("Staff can create new Operation", function() {
+    var newOperation = Staff1.createNewActivity(["Fed a patient", "Administered Drugs", "Treated Malaria"]);
+    expect(newOperation.activity).toContain("Administered Drugs");
+  });
+
 console.log(db.Staff);
 
