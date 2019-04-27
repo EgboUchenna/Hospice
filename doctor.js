@@ -13,5 +13,12 @@ Doctor.prototype = Object.create(Staff.prototype);
 Doctor.prototype.constructor = Doctor;
 
 // Add all methods that can be carried out by the admin Doctor to its prototype.
+Doctor.prototype.createNewStaff = function(name, email, password) {
+    return new Staff(name, email, password);
+  };
+  
+Doctor.prototype.readAllStaff = function() {
+    return db.Staff;
+}
 
-
+module.exports = Doctor;
