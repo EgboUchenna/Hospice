@@ -1,4 +1,4 @@
 Staff = {};
-Opreations = {};
+Operations = {};
 
-module.exports = { Staff, Opreations };
+module.exports = { Staff, Operations };
