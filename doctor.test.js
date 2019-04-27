@@ -16,4 +16,7 @@ test("Doctor can create a new  Staff", function() {
     expect(adminDoctor.readAllStaff()).toEqual(db.Staff);
   });
   
-  
+//   Admin Doctor to delete a single Staff
+  test("Doctor can delete  a Staff", function() {
+    expect(adminDoctor.deleteStaff(2)).toBeTruthy();
+  });
