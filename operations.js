@@ -36,3 +36,7 @@ Operations.prototype.readAllOperations = function() {
     return db.Operations;
 }
 
+Operations.prototype.readOneOperationById = function(id) {
+    return db.Operations[id.toString()];
+  };
+  
