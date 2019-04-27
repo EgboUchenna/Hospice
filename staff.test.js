@@ -1,4 +1,5 @@
 const Staff = require("./staff");
+const Doctor = require("./doctor");
 const db = require("./database");
 
 // Create a new staff from the Staff constructor.
@@ -8,7 +9,7 @@ var Staff2 = new Staff(" Uchenna Egbo", "uchenna001@gmail.com", "phoneix140");
 
 var Staff3 = new Staff("Steph", "Steph@gmail.com", "stephan$11");
 
-console.log(db.Staff);
+var adminDoctor2 = new Doctor("Muse", "handsum-Muse@gmail.com", "mainDoc12");
 
 //  Check if a staff object  was created successfully
 test("A New Staff to be successfully created", function() {
@@ -45,3 +46,16 @@ test("A Staff cannot update another Staff details", function() {
     Staff1.updateStaffDetails(3, "Steph", "Steph@gmail.com", "stephan")
   ).toBe("Cannot update another Staff Details");
 });
+
+test("Admin Doctor to update his own details", function() {
+    expect(
+      adminDoctor2.updateStaffDetails(
+        4,
+        "Stephen",
+        "StephenMatt@gmail.com",
+        "stephanLove"
+      )
+    ).toBe("Staff updated successfully");
+  });
+console.log(db.Staff);
+
