@@ -1,3 +1,4 @@
+const Operations = require('./operations');
 const Staff = require("./staff");
 const db = require("./database");
 
@@ -32,4 +33,8 @@ Doctor.prototype.deleteAllStaff = function() {
   return (db.Staff = {});
 };
 
+// Read all operations by all statf
+Doctor.prototype.readAllOperations = function() {
+    return Operations.prototype.readAllOperations();
+  };
 module.exports = Doctor;
