@@ -2,6 +2,7 @@ const db = require("./database");
 
 //  Create Operations constructor
 function Operations(staff_Id, activity) {
+  // Add operations properties
   this.activity = activity;
   this.staff_Id = staff_Id;
   var today = new Date();
@@ -9,7 +10,7 @@ function Operations(staff_Id, activity) {
   this.timeOfActivity = today.toLocaleTimeString();
 
   this.dateOfActivity = today.toDateString();
-
+  //  Operations unique ID
   for (var i = 1; i >= 0; ) {
     if (!db.Operations[i + ""]) {
       id = i + "";
@@ -27,3 +28,11 @@ function Operations(staff_Id, activity) {
 }
 
 module.exports = Operations;
+
+// Methods of the Operations should be in its constructor.
+
+//  Read all Operations
+Operations.prototype.readAllOperations = function() {
+    return db.Operations;
+}
+
