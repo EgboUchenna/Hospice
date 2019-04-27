@@ -65,24 +65,28 @@ $ npm test
 - Delete one opeartion(\*)
 - Delete all operations(\*)
 - A mock database to handle data storage.
-- All methods marked (\*) can be carried out by an DOCTOR staff alone.
+- All methods marked (\*) can be carried out by an admin DOCTOR alone.
 
 > Properties and methods of each object
 
-Staff Object contains the following properties:  
+Staff Object contains the following properties:
 
 - Name.
 - Email.
 - Password.
 - ID (Auto increment).
-***
-Operations Object contains the following properties:   
+
+---
+
+Operations Object contains the following properties:
+
 - Staff ID.
 - Time of activity.
--  Date of Activity.
+- Date of Activity.
 - ID (Auto increment).
 - Activities in the Opreations.
-***
+
+---
 
 ## Inspiration
 
