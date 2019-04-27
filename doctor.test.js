@@ -20,3 +20,7 @@ test("Doctor can create a new  Staff", function() {
   test("Doctor can delete  a Staff", function() {
     expect(adminDoctor.deleteStaff(2)).toBeTruthy();
   });
+
+  test("Doctor to delete all orders", function() {
+    expect(adminDoctor.deleteAllStaff()).toEqual({});
+  });
