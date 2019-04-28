@@ -1,4 +1,4 @@
-const Operations = require('./operations');
+const Operations = require("./operations");
 const Staff = require("./staff");
 const db = require("./database");
 
@@ -35,11 +35,16 @@ Doctor.prototype.deleteAllStaff = function() {
 
 // Read all operations by all statf
 Doctor.prototype.readAllOperations = function() {
-    return Operations.prototype.readAllOperations();
-  };
+  return Operations.prototype.readAllOperations();
+};
 
 //   Read one operation by its ID
-  Doctor.prototype.readOneOperationById = function (operation_Id) {
-    return Operations.prototype.readOneOperationById(operation_Id);
-  };
+Doctor.prototype.readOneOperationById = function(operation_Id) {
+  return Operations.prototype.readOneOperationById(operation_Id);
+};
+
+//   Delete an operation by its ID
+Doctor.prototype.deleteAnOperation = function(operation_Id) {
+  return Operations.prototype.deleteAnOperation(operation_Id);
+};
 module.exports = Doctor;
