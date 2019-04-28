@@ -33,10 +33,15 @@ module.exports = Operations;
 
 //  Read all Operations
 Operations.prototype.readAllOperations = function() {
-    return db.Operations;
-}
+  return db.Operations;
+};
 
+// Read an operation by its ID
 Operations.prototype.readOneOperationById = function(id) {
-    return db.Operations[id.toString()];
-  };
-  
+  return db.Operations[id.toString()];
+};
+
+// Delete an Operation by its ID
+Operations.prototype.deleteAnOperation = function(operation_id) {
+  return delete db.Operations[operation_id.toString()];
+};
