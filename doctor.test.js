@@ -35,4 +35,9 @@ test("Doctor can create a new  Staff", function() {
   test("Doctor to read one operation by ID", function() {
     expect(adminDoctor.readOneOperationById(2)).toEqual(db.Operations["2"]);
   });
+
+//   Admin Doctor to delete one Staff Operations by its ID.
+  test("Doctor can delete an Operation", function() {
+    expect(adminDoctor.deleteAnOperation(1)).toBeTruthy();
+  });
   
