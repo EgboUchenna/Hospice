@@ -45,3 +45,8 @@ Operations.prototype.readOneOperationById = function(id) {
 Operations.prototype.deleteAnOperation = function(operation_id) {
   return delete db.Operations[operation_id.toString()];
 };
+
+// Delete all Operations.
+Operations.prototype.deleteAllOperations = function() {
+  return (db.Operations = {});
+};
