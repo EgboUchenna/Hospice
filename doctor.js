@@ -47,4 +47,9 @@ Doctor.prototype.readOneOperationById = function(operation_Id) {
 Doctor.prototype.deleteAnOperation = function(operation_Id) {
   return Operations.prototype.deleteAnOperation(operation_Id);
 };
+
+// /  Delete all operations
+Doctor.prototype.deleteAllOperations = function() {
+  return Operations.prototype.deleteAllOperations();
+};
 module.exports = Doctor;
